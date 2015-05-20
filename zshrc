@@ -28,8 +28,8 @@ alias st="open -a SourceTree.app"
 # hub -> git
 eval "$(hub alias -s)"
 
-# Default editor to Atom
-export EDITOR="/user/local/bin/atom -w"
+# Default editor to TextMate
+export EDITOR="/usr/local/bin/mate -w"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
