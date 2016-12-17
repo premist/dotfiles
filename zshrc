@@ -1,11 +1,17 @@
-source <(antibody init)
-
 if [ -z $DOTFILES_DIR ]; then
 	export DOTFILES_DIR=$HOME/dotfiles
 fi
 
+export PURE_GUT_PULL=0
+
+# User binaries
+export PATH="$HOME/bin:$PATH"
+
+# Antibody
+source <(antibody init)
 antibody bundle < $DOTFILES_DIR/plugins.txt
 
+# Default editor configuration
 export EDITOR=vim
 
 # Programming languages, usually version managers
