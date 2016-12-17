@@ -25,12 +25,12 @@ colorscheme seti
 
 set clipboard=unnamed
 set backspace=2 " make backspace great again
-set encoding=utf-8 
+set encoding=utf-8
 set mouse=a " mouse
 set term=xterm-256color
 set termencoding=utf-8
 set autoindent " indent on newline
-set softtabstop=2 " default tab key amount 
+set softtabstop=2 " default tab key amount
 set tabstop=2 " default tab length
 set laststatus=2 " show filename
 set autoread " reload file on change

@@ -9,5 +9,5 @@ alias h="heroku"
 
 # Hub -> Git
 if [ -f "$(which hub)" ]; then
-	eval "$(hub alias -s)"
+  eval "$(hub alias -s)"
 fi
