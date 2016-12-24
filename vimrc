@@ -15,6 +15,7 @@ Plugin 'trusktr/seti.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-hclfmt'
 Plugin 'Clockworknet/vim-vcl'
+Plugin 'Matt-Deacalion/vim-systemd-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
