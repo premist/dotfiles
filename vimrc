@@ -40,6 +40,8 @@ set number " show line number
 set title
 
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules)$'
+
 let NERDTreeQuitOnOpen=1
 
 if executable('ag')
