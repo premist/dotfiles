@@ -17,6 +17,7 @@ Plugin 'fatih/vim-hclfmt'
 Plugin 'Clockworknet/vim-vcl'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'mileszs/ack.vim'
+Plugin 'hashivim/vim-terraform'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,6 +39,7 @@ set laststatus=2 " show filename
 set autoread " reload file on change
 set number " show line number
 set title
+set hlsearch
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules)$'
@@ -58,4 +60,5 @@ inoremap ∆ <Esc><C-W><C-J>
 inoremap ˚ <Esc><C-W><C-K>
 inoremap ¬ <Esc><C-W><C-L>
 
-nnoremap <C-\> :Ack
+nnoremap <C-\> :Ack<Space>
+nnoremap " :w!<Enter>
