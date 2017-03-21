@@ -11,3 +11,6 @@ alias h="heroku"
 if [ -f "$(which hub)" ]; then
   eval "$(hub alias -s)"
 fi
+
+# Git related alias
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
