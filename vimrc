@@ -17,6 +17,8 @@ Plugin 'fatih/vim-hclfmt'
 Plugin 'Clockworknet/vim-vcl'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'mileszs/ack.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,6 +43,8 @@ set title
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules)$'
+
+let g:jsx_ext_required = 0
 
 let NERDTreeQuitOnOpen=1
 
