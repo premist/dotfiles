@@ -16,7 +16,6 @@ export EDITOR=vim
 
 # Completions
 fpath=($DOTFILES_DIR/completions $fpath)
-autoload -U compinit && compinit
 
 # Programming languages, usually version managers
 source $DOTFILES_DIR/languages/ruby.zsh
