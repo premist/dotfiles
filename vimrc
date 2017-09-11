@@ -38,6 +38,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/yajs.vim'
 Plugin 'posva/vim-vue'
+Plugin 'isRuslan/vim-es6'
 
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
