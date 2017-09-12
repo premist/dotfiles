@@ -10,8 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Powerline
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Essentials
 Plugin 'scrooloose/nerdtree'
@@ -19,6 +17,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'trusktr/seti.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
 
 " HashiCorp Config Language (HCL)
 Plugin 'fatih/vim-hclfmt'
@@ -52,6 +53,9 @@ filetype plugin indent on    " required
 
 syntax on
 colorscheme seti
+
+" Powerline configuration
+let g:airline_theme='simple'
 
 set clipboard=unnamed
 set backspace=2 " make backspace great again
