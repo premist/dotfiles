@@ -3,6 +3,10 @@ filetype off " vundle said so
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" FZF
+set rtp+=/usr/local/opt/fzf
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -10,13 +14,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
 " Essentials
+Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'trusktr/seti.vim'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
@@ -47,6 +49,12 @@ Plugin 'elixir-lang/vim-elixir'
 " Postgres
 Plugin 'lifepillar/pgsql.vim'
 
+" TOML
+Plugin 'cespare/vim-toml'
+
+" Rust
+Plugin 'rust-lang/rust.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -72,8 +80,7 @@ set number " show line number
 set title
 set hlsearch
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules)$'
+" let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules)$'
 
 let g:jsx_ext_required = 0
 let g:sql_type_default = 'pgsql'
@@ -96,5 +103,14 @@ inoremap ∆ <Esc><C-W><C-J>
 inoremap ˚ <Esc><C-W><C-K>
 inoremap ¬ <Esc><C-W><C-L>
 
-nnoremap <C-\> :Ack<Space>
 nnoremap " :w!<Enter>
+
+nnoremap <C-P> :Files<Enter>
+nnoremap <C-\> :Ag<Enter>
+
+" Override Ag to Show preview
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
+
+command! -bang -nargs=* Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
