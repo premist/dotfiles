@@ -16,6 +16,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Essentials
 Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/gv.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'trusktr/seti.vim'
 Plugin 'editorconfig/editorconfig-vim'
