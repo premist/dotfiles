@@ -23,6 +23,7 @@ source $DOTFILES_DIR/languages/node.zsh
 source $DOTFILES_DIR/languages/python.zsh
 source $DOTFILES_DIR/languages/elixir.zsh
 source $DOTFILES_DIR/languages/rust.zsh
+source $DOTFILES_DIR/languages/go.zsh
 
 # SDKs
 source $DOTFILES_DIR/sdks/google-cloud-sdk.zsh
