@@ -108,11 +108,18 @@ inoremap ¬ <Esc><C-W><C-L>
 nnoremap " :w!<Enter>
 
 nnoremap <C-P> :Files<Enter>
-nnoremap <C-\> :Ag<Enter>
+nnoremap <C-\> :Rg<Enter>
 
-" Override Ag to Show preview
+" Show preview on Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>),
+  \   fzf#vim#with_preview('right:50%'), <bang>0)
+
+" Show preview on Ag
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
 
+" Show preview on Files
 command! -bang -nargs=* Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
