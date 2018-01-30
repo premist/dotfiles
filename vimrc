@@ -1,65 +1,60 @@
-set nocompatible " vundle said so
-filetype off " vundle said so
+set nocompatible
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" FZF
-set rtp+=/usr/local/opt/fzf
-
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Essentials
-Plugin 'junegunn/fzf.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'junegunn/gv.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'trusktr/seti.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'trusktr/seti.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
 
 " HashiCorp Config Language (HCL)
-Plugin 'fatih/vim-hclfmt'
+Plug 'fatih/vim-hclfmt'
 
 " HashiCorp Terraform
-Plugin 'hashivim/vim-terraform'
+Plug 'hashivim/vim-terraform'
 
 " Varnish Config Language (VCL)
-Plugin 'Clockworknet/vim-vcl'
+Plug 'Clockworknet/vim-vcl'
 
 " SystemD config
-Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plug 'Matt-Deacalion/vim-systemd-syntax'
 
 " JS
-" Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'othree/yajs.vim'
-Plugin 'posva/vim-vue'
-Plugin 'isRuslan/vim-es6'
+" Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'othree/yajs.vim'
+Plug 'posva/vim-vue'
+Plug 'isRuslan/vim-es6'
 
 " Elixir
-Plugin 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 
 " Postgres
-Plugin 'lifepillar/pgsql.vim'
+Plug 'lifepillar/pgsql.vim'
 
 " TOML
-Plugin 'cespare/vim-toml'
+Plug 'cespare/vim-toml'
 
 " Rust
-Plugin 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" All of your Plugs must be added before the following line
+call  plug#end()            " required
+" filetype plugin indent on    " required
 
 syntax on
 colorscheme seti
