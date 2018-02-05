@@ -19,6 +19,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'edkolev/tmuxline.vim'
 
 " HashiCorp Config Language (HCL)
 Plug 'fatih/vim-hclfmt'
@@ -53,14 +54,16 @@ Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 
 " All of your Plugs must be added before the following line
-call  plug#end()            " required
+call plug#end()            " required
 " filetype plugin indent on    " required
 
 syntax on
+set termguicolors
 colorscheme seti
 
 " Powerline configuration
-let g:airline_theme='simple'
+let g:airline_theme='minimalist'
+let g:tmuxline_powerline_separators = 0
 
 set clipboard=unnamed
 set backspace=2 " make backspace great again
