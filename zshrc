@@ -14,6 +14,13 @@ antibody bundle < $DOTFILES_DIR/plugins.txt
 # Default editor configuration
 export EDITOR=vim
 
+# Use darker fzf colors
+# TODO: Adopt seti color scheme
+export FZF_DEFAULT_OPTS="
+--color fg:242,bg:233,hl:65,fg+:15,bg+:234,hl+:108
+--color info:108,prompt:109,spinner:108,pointer:168,marker:168
+"
+
 # Completions
 fpath=($DOTFILES_DIR/completions $fpath)
 
