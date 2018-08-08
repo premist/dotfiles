@@ -108,6 +108,8 @@ nnoremap " :w!<Enter>
 nnoremap <C-P> :Files<Enter>
 nnoremap <C-\> :Rg<Enter>
 
+autocmd FileType yaml set tabstop=8|set shiftwidth=2|set expandtab
+
 " Show preview on Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
