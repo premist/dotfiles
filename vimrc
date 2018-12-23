@@ -9,12 +9,12 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Essentials
+Plug 'ayu-theme/ayu-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'trusktr/seti.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -59,7 +59,8 @@ call plug#end()            " required
 
 syntax on
 set termguicolors
-colorscheme seti
+let ayucolor="mirage"
+colorscheme ayu
 
 " Powerline configuration
 let g:airline_theme='minimalist'
