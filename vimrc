@@ -21,6 +21,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
 
+" LSP
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 " HashiCorp Config Language (HCL)
 Plug 'fatih/vim-hclfmt'
 
@@ -53,13 +59,19 @@ Plug 'cespare/vim-toml'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
+
+" Swift
+Plug 'keith/swift.vim'
+
 " All of your Plugs must be added before the following line
 call plug#end()            " required
 " filetype plugin indent on    " required
 
 syntax on
 set termguicolors
-let ayucolor="mirage"
+let ayucolor="dark"
 colorscheme ayu
 
 " Powerline configuration
@@ -124,3 +136,30 @@ command! -bang -nargs=* Ag
 " Show preview on Files
 command! -bang -nargs=* Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
+
+" if executable('solargraph')
+"   au User lsp_setup call lsp#register_server({
+"     \ 'name': 'solargraph',
+"     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+"     \ 'initialization_options': {"diagnostics": "true"},
+"     \ 'whitelist': ['ruby'],
+"     \ })
+" endif
+" 
+" if executable('sourcekit-lsp')
+"   au User lsp_setup call lsp#register_server({
+"     \ 'name': 'sourcekit-lsp',
+"     \ 'cmd': {server_info->['sourcekit-lsp']},
+"     \ 'whitelist': ['swift'],
+"     \ })
+" endif
+" 
+" if executable('dart_language_server')
+"   au User lsp_setup call lsp#register_server({
+"     \ 'name': 'dart_language_server',
+"     \ 'cmd': {server_info->['dart_language_server']},
+"     \ 'whitelist': ['dart'],
+"     \ })
+" endif
+
+set completeopt-=preview

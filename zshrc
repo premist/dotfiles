@@ -2,6 +2,8 @@ if [ -z $DOTFILES_DIR ]; then
   export DOTFILES_DIR=$HOME/dotfiles
 fi
 
+export LANG=en_US.UTF-8
+
 export PURE_GUT_PULL=0
 
 # User binaries
@@ -31,9 +33,13 @@ source $DOTFILES_DIR/languages/python.zsh
 source $DOTFILES_DIR/languages/elixir.zsh
 source $DOTFILES_DIR/languages/rust.zsh
 source $DOTFILES_DIR/languages/go.zsh
+source $DOTFILES_DIR/languages/dart.zsh
 
 # SDKs
 source $DOTFILES_DIR/sdks/google-cloud-sdk.zsh
+source $DOTFILES_DIR/sdks/flutter.zsh
 
 # Alias
 source $DOTFILES_DIR/aliases/common.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
