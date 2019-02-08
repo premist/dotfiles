@@ -6,6 +6,8 @@ export LANG=en_US.UTF-8
 
 export PURE_GUT_PULL=0
 
+export HOMEBREW_NO_ANALYTICS=1
+
 # User binaries
 export PATH="$HOME/bin:$PATH"
 
