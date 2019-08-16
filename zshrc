@@ -43,3 +43,6 @@ source $DOTFILES_DIR/sdks/flutter.zsh
 source $DOTFILES_DIR/aliases/common.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U compinit && compinit
+zmodload -i zsh/complist
