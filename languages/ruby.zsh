@@ -1,7 +1,13 @@
 #!/usr/bin/env zsh
 
 if [ -z $CHRUBY_DIR ]; then
-	export CHRUBY_DIR=/usr/local/share/chruby
+  # macOS Homebrew
+  if [ -d /usr/local/share/chruby ]; then
+    export CHRUBY_DIR=/usr/local/share/chruby
+  # AUR
+  elif [ -d /usr/share/chruby ]; then
+    export CHRUBY_DIR=/usr/share/chruby
+  fi
 fi
 
 if [ -s $CHRUBY_DIR/chruby.sh ]; then
