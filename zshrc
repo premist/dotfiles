@@ -3,6 +3,7 @@ if [ -z $DOTFILES_DIR ]; then
 fi
 
 export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 export PURE_GUT_PULL=0
 
