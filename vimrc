@@ -65,6 +65,9 @@ Plug 'dart-lang/dart-vim-plugin'
 " Swift
 Plug 'keith/swift.vim'
 
+" Caddy
+Plug 'isobit/vim-caddyfile'
+
 " All of your Plugs must be added before the following line
 call plug#end()            " required
 " filetype plugin indent on    " required
@@ -145,7 +148,7 @@ command! -bang -nargs=* Files
 "     \ 'whitelist': ['ruby'],
 "     \ })
 " endif
-" 
+"
 " if executable('sourcekit-lsp')
 "   au User lsp_setup call lsp#register_server({
 "     \ 'name': 'sourcekit-lsp',
@@ -153,7 +156,7 @@ command! -bang -nargs=* Files
 "     \ 'whitelist': ['swift'],
 "     \ })
 " endif
-" 
+"
 " if executable('dart_language_server')
 "   au User lsp_setup call lsp#register_server({
 "     \ 'name': 'dart_language_server',
