@@ -4,6 +4,9 @@ if [ -z $CHRUBY_DIR ]; then
   # macOS Homebrew
   if [ -d /usr/local/share/chruby ]; then
     export CHRUBY_DIR=/usr/local/share/chruby
+  # macOS Homebrew Apple Silicion
+  elif [ -d /opt/homebrew/opt/chruby/share/chruby ]; then
+    export CHRUBY_DIR=/opt/homebrew/opt/chruby/share/chruby
   # AUR
   elif [ -d /usr/share/chruby ]; then
     export CHRUBY_DIR=/usr/share/chruby
